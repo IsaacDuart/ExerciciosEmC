@@ -1,76 +1,43 @@
-# ExerciciosEmC
+# Práticas de Programação em C - IFCE
 
-# Lista de Exercícios em C
+Este repositório contém as práticas de programação desenvolvidas para a matéria de **Laboratório de Programação** do **IFCE**. O foco principal do repositório é o aprendizado e a implementação de conceitos fundamentais da linguagem **C**, com exercícios e desafios diversos. Abaixo estão descritas as principais seções e desafios do repositório:
 
-Introdução
-Bem-vindo ao repositório da lista de exercícios de programação em C para a disciplina de Laboratório de Programação. Este repositório contém uma série de exercícios que abordam conceitos fundamentais da linguagem C.
+## Estrutura do Repositório
 
-Exercícios
+O repositório está organizado da seguinte forma:
 
-1. **Conversão de Bases**: Leia um valor inteiro decimal e mostre-o nas bases hexadecimal e octal.  
-   Exemplo: 10 em hexadecimal é A e em octal é 12.
+- **Lista 1**: Exercícios iniciais que abordam os conceitos básicos de programação em C.
+- **Lista 2**: Exercícios intermediários, onde são trabalhados conceitos mais avançados e técnicas de manipulação de dados.
+- **Desafio: Gerenciamento de Armários**: Um desafio que utiliza operadores bit a bit para gerenciar a ocupação de armários de alunos em uma universidade.
 
-2. **Formatação de Números Reais**: Leia um valor real e escreva-o com uma casa decimal.
+## Desafio: Gerenciamento de Armários
 
-3. **Cálculos com Expressões**: Leia um valor inteiro e calcule seu triplo, quadrado e meio.
+Imagine que você foi contratado para desenvolver um sistema para gerenciar armários de alunos em uma universidade. O objetivo desse desafio é criar uma prova de conceito para controlar a ocupação de **8 armários**. Devido às limitações de memória no dispositivo onde o código será embarcado, a solução deve ser eficiente, utilizando uma **única variável do tipo `char`** (sem sinal) para controlar os armários, de forma que cada bit da variável represente a ocupação de um armário (0 para disponível e 1 para ocupado).
 
-4. **Conta de Restaurante**: Calcule o valor total a ser pago em um restaurante considerando 10% de taxa para o garçom.
+### Requisitos:
 
-5. **Peso Ideal**: Calcule o peso ideal com base na altura e sexo da pessoa.
+- O sistema deve oferecer um **menu interativo** com as opções:
+  1. **Ocupar armário**: Alocar um armário para um aluno.
+  2. **Liberar armário**: Desocupar um armário.
+  3. **Sair**: Finalizar o programa.
 
-6. **Tempo em Segundos**: Converta uma quantidade de horas, minutos e segundos em total de segundos.
+- **Operadores bit a bit** devem ser usados para ligar e desligar os bits na variável de controle e monitorar os armários ocupados e livres.
 
-7. **Quadrado de um Número**: Leia um valor inteiro e apresente o seu quadrado.
+- O sistema deve exibir, em cada rodada, a lista de armários **ocupados** e **disponíveis**.
 
-8. **Sucessor e Antecessor**: Leia um valor inteiro e apresente seus valores sucessor e antecessor.
+- O código **não pode usar vetores**. Apenas a manipulação dos bits de uma única variável `char` será utilizada.
 
-9. **Volume de um Caixa Retangular**: Calcule o volume de um caixa retangular.
+- **Geração de números aleatórios**: Para gerar aleatoriedade no processo, o código pode usar a função `rand()` para simular a alocação e desocupação dos armários.
 
-10. **Conversão de Reais para Dólares**: Converta um valor em reais para dólares, solicitando a cotação.
+### Exemplo de Funcionamento
 
-11. **Operações Básicas**: Leia dois números e imprima a soma, produto, diferença, quociente e resto da divisão.
+Ao rodar o programa, o usuário verá um menu como o seguinte:
 
-12. **Troca de Valores**: Troque os valores de duas variáveis e mostre o resultado.
+```
+1. Ocupar armário
+2. Liberar armário
+3. Sair
+Escolha uma opção: 
+```
 
-13. **Conversão de Temperatura**: Converta Celsius para Fahrenheit usando a fórmula F = (9 * C + 160) / 5.
-
-14. **Cálculo de Salário de Vendedor**: Calcule o salário líquido de um vendedor com base nos dias trabalhados.
-
-15. **Salário de Professor**: Calcule o salário líquido de um professor, considerando horas trabalhadas e descontos.
-
-16. **Valor Absoluto**: Apresente o valor absoluto de um número inteiro sem usar if.
-
-17. **Cálculos de Círculo**: Calcule e imprima o diâmetro, circunferência e área de um círculo.
-
-18. **Desenho de Formas**: Imprima um retângulo, uma elipse, uma seta e um losango.
-
-19. **Número Par ou Ímpar**: Determine se um número é par ou ímpar sem usar if.
-
-20. **Múltiplos**: Verifique se um número é múltiplo de outro sem usar if.
-
-21. **Representação de Caracteres**: Imprima os inteiros correspondentes a letras e símbolos.
-
-22. **Inversão de Dígitos**: Separe e inverta os dígitos de um número de três dígitos.
-
-23. **Produto com Potência**: Calcule o produto entre um número e 2 elevado a um valor dado.
-
-24. **Conversão de Tempo**: Converta um tempo em segundos para horas, minutos e segundos.
-
-25. **Distância entre Pontos**: Calcule a distância entre dois pontos no plano.
-
-26. **Média Aritmética e Geométrica**: Calcule e imprima a média aritmética e geométrica de três números.
-
-Como Executar
-
-1. Clone este repositório:  
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-
-2. Navegue até o diretório do projeto:  
-   cd seu-repositorio
-
-3. Compile o código com gcc (substitua exercicioX.c pelo arquivo desejado):  
-   gcc exercicioX.c -o exercicioX
-
-4. Execute o programa:  
-   ./exercicioX
-
+Conforme o usuário interagir com o menu, o sistema atualizará a ocupação dos armários e exibirá quais armários estão **livres** e **ocupados**, manipulando os bits de forma eficiente.
